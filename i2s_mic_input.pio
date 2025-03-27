@@ -1,0 +1,19 @@
+.side_set 2
+left_start:
+    set    x, 23             side 0b00
+left_loop:
+    in     pins, 1           side 0b01
+    jmp    x--, left_loop    side 0b00
+    set    y, 7              side 0b00
+dummy_left:
+    nop                      side 0b01
+    jmp    y--, dummy_left   side 0b00
+    set    x, 23             side 0b10
+right_loop:
+    in     pins, 1           side 0b11
+    jmp    x--, right_loop   side 0b10
+    set    y, 7              side 0b10
+dummy_right:
+    nop                      side 0b11
+    jmp    y--, dummy_right  side 0b10
+    jmp    left_start        side 0b00
