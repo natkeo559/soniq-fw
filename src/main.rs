@@ -53,7 +53,7 @@ async fn main(spawner: Spawner) {
     );
 
     spawner.must_spawn(mic_task(i2s_mic, BUFFER_CHANNEL.sender()));
-    spawner.must_spawn(sd_writer(BUFFER_CHANNEL.receiver()));
+    spawner.must_spawn(sd_task(BUFFER_CHANNEL.receiver()));
 }
 
 #[embassy_executor::task]
@@ -75,7 +75,7 @@ async fn mic_task(
 }
 
 #[embassy_executor::task]
-async fn sd_writer(
+async fn sd_task(
     receiver: Receiver<'static, CriticalSectionRawMutex, [u32; BUFFER_SIZE], CHANNEL_CAP>,
 ) {
     loop {
