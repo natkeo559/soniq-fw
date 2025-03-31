@@ -4,6 +4,7 @@ name = "soniq-fw"
 version = "0.1.0"
 authors = ["natkeo559 <nhkeoug@gmail.com>"]
 resolver = "2"
+license = "MIT OR Apache-2.0"
 
 [[bin]]
 name = "soniq-fw"

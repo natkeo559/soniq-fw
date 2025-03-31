@@ -79,3 +79,16 @@ Receives buffers and currently logs sample values. It is designed to be replaced
   - Handle proper WAV header creation and patching  
   - Write buffers in real-time  
 - **Error Handling** for write failures and card removal  
+
+## License
+
+Licensed under either of:
+
+- Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE))
+- MIT License ([LICENSE-MIT](LICENSE-MIT))
+
+at your option.
+
+### Contribution
+
+Unless explicitly stated otherwise, any contribution intentionally submitted for inclusion in this project by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
