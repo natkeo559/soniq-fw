@@ -12,7 +12,7 @@ bench = false
 
 [dependencies]
 defmt = "0.3"
-defmt-rtt = "0.4"
+defmt-rtt = "0.4.2"
 panic-probe = { version = "0.3", features = ["print-defmt"] }
 
 embedded-hal = "1.0.0"
@@ -38,6 +38,8 @@ rand = { version = "0.9.0", default-features = false }
 static_cell = "2.1.0"
 portable-atomic = { version = "1.11.0", features = ["critical-section"] }
 rand_core = "0.9.3"
+embedded-sdmmc = "0.8.1"
+embedded-hal-bus = "0.3.0"
 [profile.release]
 debug = 2
 lto = true
